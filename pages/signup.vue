@@ -26,9 +26,9 @@
         label="password"
         :rules="[rules.min, rules.required]"
       ></v-text-field>
-      <button @click="register" class="btn--cta">REGISTER</button>
+      <button @click.stop.prevent="register" class="btn--cta">REGISTER</button>
     </v-form>
-    <h3 class="signup__note">Already a member?</h3>
+    <h3 class="signup__note">ALREADY A MEMBER?</h3>
     <nuxt-link to="/login">
       <button class="btn--alt">Log in to your account</button>
     </nuxt-link>
@@ -37,6 +37,7 @@
 
 <script>
 export default {
+  middleware: "notAuthenticated",
   data() {
     return {
       rules: {

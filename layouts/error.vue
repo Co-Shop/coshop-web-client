@@ -6,12 +6,8 @@
 </template>
 
 <script>
-export default {
-  mounted() {
-    window.console.log("Error layout");
-  }
-};
+export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 </style>

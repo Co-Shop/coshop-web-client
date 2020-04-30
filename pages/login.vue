@@ -1,27 +1,73 @@
 <template>
   <v-layout column align-center>
-    <h1 class="signup__header">Sign up to Co-Shop</h1>
-    <v-form class="signup__form" lazy-validation>
-      <v-text-field outlined v-model="username" :counter="10" label="username" required></v-text-field>
-      <v-text-field outlined v-model="email" type="email" label="email" required></v-text-field>
-      <v-text-field outlined v-model="password" type="password" label="password" required></v-text-field>
-      <button @click="register" class="btn--cta">REGISTER</button>
+    <h1 class="login__header">Log in to Co-Shop</h1>
+    <v-form class="login__form" lazy-validation>
+      <v-text-field
+        outlined
+        color="green"
+        v-model="loginEmail"
+        type="email"
+        label="email"
+        :rules="[rules.email, rules.required]"
+      ></v-text-field>
+      <v-text-field
+        outlined
+        color="green"
+        v-model="loginPassword"
+        type="password"
+        label="password"
+        :rules="[rules.required]"
+      ></v-text-field>
+      <button @click.stop.prevent="login" class="btn--cta">LOGIN</button>
     </v-form>
-    <h3 class="signup__note">Already a member?</h3>
-    <nuxt-link to="/login">
-      <button class="btn--alt">Log in to your account</button>
+    <h3 class="login__note">NOT A MEMBER?</h3>
+    <nuxt-link to="/signup">
+      <button class="btn--alt">Get started with Co-Shop</button>
     </nuxt-link>
   </v-layout>
 </template>
 
 <script>
-export default {};
+export default {
+  middleware: "notAuthenticated",
+  data() {
+    return {
+      rules: {
+        required: value => !!value || "Required.",
+        email: v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+      }
+    };
+  },
+  computed: {
+    loginEmail: {
+      get() {
+        return this.$store.state.loginEmail;
+      },
+      set(value) {
+        this.$store.commit("auth/setLoginEmail", value);
+      }
+    },
+    loginPassword: {
+      get() {
+        return this.$store.state.loginPassword;
+      },
+      set(value) {
+        this.$store.commit("auth/setLoginPassword", value);
+      }
+    }
+  },
+  methods: {
+    login() {
+      window.console.log("Attempted to login");
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/app";
 
-.signup {
+.login {
   &__header {
     margin: 10vh 0 5vh 0;
   }
@@ -53,3 +99,4 @@ export default {};
   font-size: 24px;
 }
 </style>
+

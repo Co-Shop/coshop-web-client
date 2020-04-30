@@ -5,13 +5,8 @@
 </template>
 
 <script>
-export default {
-  mounted() {
-    window.console.log("Defaults layout");
-  }
-};
+export default {};
 </script>
 
 <style lang="scss">
-@import "../assets/app";
 </style>
