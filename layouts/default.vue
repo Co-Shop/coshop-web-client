@@ -1,7 +1,17 @@
 <template>
-  <v-app></v-app>
+  <v-app>
+    <nuxt />
+  </v-app>
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    window.console.log("Defaults layout");
+  }
+};
 </script>
+
+<style lang="scss">
+@import "../assets/app";
+</style>

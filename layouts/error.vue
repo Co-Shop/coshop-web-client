@@ -7,15 +7,11 @@
 
 <script>
 export default {
-  layout: "empty",
-  head() {
-    const title = "Error";
-    return {
-      title
-    };
+  mounted() {
+    window.console.log("Error layout");
   }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 </style>

@@ -6,7 +6,6 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    titleTemplate: "%s | Co-Shop ",
     title: "Co-Shop",
     meta: [
       { charset: "utf-8" },
@@ -18,7 +17,20 @@ module.exports = {
           "Shopping assistant to help you limit your exposure in public during dire times"
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        href:
+          "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap",
+        rel: "stylesheet"
+      }
+    ],
+    script: [
+      {
+        src: "https://kit.fontawesome.com/3a9bb76d01.js",
+        crossorigin: "anonymous"
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -54,20 +66,8 @@ module.exports = {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ["~/assets/variables.scss"],
-    theme: {
-      main: false,
-      themes: {
-        main: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
+    font: {
+      family: '"Open Sans", sans-serif'
     }
   },
   /*

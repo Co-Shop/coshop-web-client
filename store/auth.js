@@ -1,3 +1,4 @@
+const AJAX = require("../ajax/index");
 const { checkAuth, loginAuth, registerAuth } = AJAX;
 const authTokenHeader = "x-auth-token";
 
@@ -17,22 +18,22 @@ export const state = () => ({
 
 export const mutations = {
   setUser(state, payload) {
-    state.auth.user = payload;
+    state.user = payload;
   },
   setLoginEmail(state, payload) {
-    state.auth.loginEmail = payload;
+    state.loginEmail = payload;
   },
   setLoginPassword(state, payload) {
-    state.auth.loginPassword = payload;
+    state.loginPassword = payload;
   },
   setRegisterUsername(state, payload) {
-    state.auth.registerUsername = payload;
+    state.registerUsername = payload;
   },
   setRegisterEmail(state, payload) {
-    state.auth.registerEmail = payload;
+    state.registerEmail = payload;
   },
   setRegisterPassword(state, payload) {
-    state.auth.registerPassword = payload;
+    state.registerPassword = payload;
   }
 };
 
