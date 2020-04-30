@@ -5,12 +5,13 @@ export default {
     axios.defaults.headers.common["x-auth-token"] = localStorage.getItem(
       "token"
     );
+
     return axios
       .get("/auth/@me")
       .then(response => {
         return response.data;
       })
-      .catch(err => err);
+      .catch(() => window.console.error("Error checking auth"));
   },
 
   async loginAuth(email = "", password = "") {
@@ -20,7 +21,7 @@ export default {
         password
       })
       .then(response => response.data)
-      .catch(err => err);
+      .catch(() => window.console.error("Error checking auth"));
   },
 
   async registerAuth(username = "", email = "", password = "") {
@@ -31,6 +32,6 @@ export default {
         password
       })
       .then(response => response.data)
-      .catch(err => err);
+      .catch(() => window.console.error("Error checking auth"));
   }
 };
