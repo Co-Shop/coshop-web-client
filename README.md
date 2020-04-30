@@ -1,4 +1,4 @@
-# ![Co-Shop Web Client](https://github.com/Co-Shop/coshop-web-client/blob/master/docs/logo.png?raw=true)
+# ![Co-Shop Web Client](https://raw.githubusercontent.com/Co-Shop/coshop-web-client/master/docs/brand.png)
 
 > Web app for quarantine shopping assistant
 
@@ -31,7 +31,7 @@ This is the web front-end of Co-Shop, a Covid-19 project made to make shopping f
 
 ### Screenshot:
 
-![Landing](https://github.com/Co-Shop/coshop-web-client/blob/master/docs/landing.png)
+![Landing](https://raw.githubusercontent.com/Co-Shop/coshop-web-client/master/docs/landing.PNG)
 
 For more screenshots and other documentation, navigate to the /docs directory from the root of this repo.
 
