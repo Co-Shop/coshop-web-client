@@ -1,7 +1,36 @@
-const checkAuth = () => {};
+import axios from "axios";
 
-const login = (e, pw) => {};
+export default {
+  async checkAuth() {
+    axios.defaults.headers.common["x-auth-token"] = localStorage.getItem(
+      "token"
+    );
+    return axios
+      .get("/auth/@me")
+      .then(response => {
+        return response.data;
+      })
+      .catch(err => err);
+  },
 
-const register = (e, pw) => {};
+  async loginAuth(email = "", password = "") {
+    return axios
+      .post("/auth/login", {
+        email,
+        password
+      })
+      .then(response => response.data)
+      .catch(err => err);
+  },
 
-const fetchProducts = () => {};
+  async registerAuth(username = "", email = "", password = "") {
+    return axios
+      .post("/auth/register", {
+        username,
+        email,
+        password
+      })
+      .then(response => response.data)
+      .catch(err => err);
+  }
+};
