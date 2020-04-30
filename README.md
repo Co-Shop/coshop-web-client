@@ -6,7 +6,7 @@
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-**NOTE: To be used on mobile and tablet only, we have not yet added support for desktop**
+**🚧 UNDER CONSTRUCTION: We just started working on this about a week ago, a very late start for the hackathon. We've made some decent progress though and will probably continue working on it after the hackathon is over. 🚧**
 
 This is the web front-end of Co-Shop, a Covid-19 project made to make shopping for essential items easier and reduce time spent in public. It's a universal web app designed with a mobile first approach using the full Vue suite and Nuxt.
 
@@ -27,13 +27,13 @@ This is the web front-end of Co-Shop, a Covid-19 project made to make shopping f
 
 ## Usage
 
-<!-- Gifs -->
+<!-- Gifs and Screenshots -->
 
-### Demo:
+### Screenshot:
 
-![Demo](https://github.com/Co-Shop/coshop-web-client/blob/development/docs/demo.gif?raw=true)
+![Landing](https://github.com/Co-Shop/coshop-web-client/blob/master/docs/landing.png?raw=true)
 
-The above gif demonstrates the basic app flow. For more screenshots and other documentation, navigate to the /docs directory from the root of this repo.
+For more screenshots and other documentation, navigate to the /docs directory from the root of this repo.
 
 ## Getting started
 
