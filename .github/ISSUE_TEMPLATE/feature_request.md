@@ -1,10 +1,12 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: "Feature Req: <your_concise_title_here>"
+title: "Feature req: <your_concise_title_here>"
 labels: enhancement
 assignees: bryce-mcmath
----**Is your feature request related to a problem? Please describe.**
+---
+
+**Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. This app could be more realistic if [...]
 
 **Describe the solution you'd like**
